@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-08T15:06:28 IST" name="Default suite" finished-at="2023-09-08T15:06:31 IST" duration-ms="2838">
+  <suite started-at="2023-09-11T17:41:11 IST" name="Default suite" finished-at="2023-09-11T17:41:16 IST" duration-ms="4731">
     <groups>
-      <group name="notification">
-        <method signature="NotificationControllerGetApi.isEmailExistInSuppressionList()[pri:0, instance:com.ripplestreet.AllGetApis.NotificationControllerGetApi@53045c6c]" name="isEmailExistInSuppressionList" class="com.ripplestreet.AllGetApis.NotificationControllerGetApi"/>
-      </group> <!-- notification -->
+      <group name="activityugcreview">
+        <method signature="DiscussionControllerGetApi.getDiscussionListByFilters()[pri:55, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" name="getDiscussionListByFilters" class="com.ripplestreet.AllGetApis.DiscussionControllerGetApi"/>
+        <method signature="DiscussionControllerGetApi.getDiscussion()[pri:56, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" name="getDiscussion" class="com.ripplestreet.AllGetApis.DiscussionControllerGetApi"/>
+      </group> <!-- activityugcreview -->
     </groups>
-    <test started-at="2023-09-08T15:06:28 IST" name="Default test" finished-at="2023-09-08T15:06:31 IST" duration-ms="2838">
-      <class name="com.ripplestreet.AllGetApis.NotificationControllerGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.NotificationControllerGetApi@53045c6c]" started-at="2023-09-08T15:06:24 IST" name="authToken" finished-at="2023-09-08T15:06:28 IST" duration-ms="3477" status="PASS">
+    <test started-at="2023-09-11T17:41:11 IST" name="Default test" finished-at="2023-09-11T17:41:16 IST" duration-ms="4731">
+      <class name="com.ripplestreet.AllGetApis.DiscussionControllerGetApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:07 IST" name="authToken" finished-at="2023-09-11T17:41:11 IST" duration-ms="3621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.NotificationControllerGetApi@53045c6c]" started-at="2023-09-08T15:06:28 IST" name="BaseURI" finished-at="2023-09-08T15:06:28 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:11 IST" name="BaseURI" finished-at="2023-09-11T17:41:11 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="isEmailExistInSuppressionList()[pri:0, instance:com.ripplestreet.AllGetApis.NotificationControllerGetApi@53045c6c]" started-at="2023-09-08T15:06:28 IST" name="isEmailExistInSuppressionList" finished-at="2023-09-08T15:06:30 IST" duration-ms="1545" status="PASS">
+        <test-method signature="getDiscussionListByFilters()[pri:55, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:11 IST" name="getDiscussionListByFilters" finished-at="2023-09-11T17:41:12 IST" duration-ms="1530" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- isEmailExistInSuppressionList -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.NotificationControllerGetApi@53045c6c]" started-at="2023-09-08T15:06:30 IST" name="StatusCode" finished-at="2023-09-08T15:06:31 IST" duration-ms="1234" status="PASS">
+        </test-method> <!-- getDiscussionListByFilters -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:12 IST" name="StatusCode" finished-at="2023-09-11T17:41:14 IST" duration-ms="1341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllGetApis.NotificationControllerGetApi -->
+        <test-method signature="getDiscussion()[pri:56, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:14 IST" name="getDiscussion" finished-at="2023-09-11T17:41:15 IST" duration-ms="1506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDiscussion -->
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:14 IST" name="BaseURI" finished-at="2023-09-11T17:41:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseURI -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:15 IST" name="StatusCode" finished-at="2023-09-11T17:41:16 IST" duration-ms="295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StatusCode -->
+      </class> <!-- com.ripplestreet.AllGetApis.DiscussionControllerGetApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -15,6 +15,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
 public class TaskControllerPutApi extends genricUtilities{
+	@SuppressWarnings("resource")
 	@Test(priority=200,groups="activity-hub")
 	public void updateTask() throws Throwable {
 		Testcase = 200;

@@ -23,6 +23,7 @@ public class ReviewControllerPutApi extends genricUtilities {
 		Testcase = 195;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
+		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
@@ -34,11 +35,12 @@ public class ReviewControllerPutApi extends genricUtilities {
 				.put("/activityugcreview/review/updateExternalReview");
 	}
 
-	@Test
+	@Test(groups="activityugcreview")
 	public void enableOrDisableReview() throws IOException {
 		Testcase = 433;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
+		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
@@ -49,6 +51,5 @@ public class ReviewControllerPutApi extends genricUtilities {
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.put("/activityugcreview/review/moderateorfeaturereviews?feedbackReason=" + feedbackReason
 						+ "&moderationReason=" + moderationReason);
-
 	}
 }

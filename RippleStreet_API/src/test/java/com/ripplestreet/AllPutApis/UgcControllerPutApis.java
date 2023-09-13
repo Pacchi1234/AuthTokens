@@ -1,4 +1,4 @@
-package com.ripplestreet.AllPostApis;
+package com.ripplestreet.AllPutApis;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,47 +10,49 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.postApiutilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class IntrestControllerPostApi extends postApiutilities{
-	@Test(groups="community-service")
-	public void createIntrest() throws IOException {
-		Testcase = 20;
-		File file = new File(postApipath);
+public class UgcControllerPutApis extends genricUtilities {
+	@Test(groups = "activityugcreview")
+	public void putUserAssest() throws IOException {
+		Testcase = 439;
+		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet("postApi");
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
 		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/community-service/user/interest");
-		
+				.put("/activityugcreview/client_api/ugc");
+
 	}
-	@Test(groups="community-service")
-	public void creatIntrestInBulk() throws IOException {
-		Testcase = 21;
-		File file = new File(postApipath);
+
+	@Test
+	public void UpdateUGCToModerteAndFeature() throws IOException {
+		Testcase = 440;
+		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet("postApi");
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
 		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/community-service/user/interest/bulk");
-		
+				.put("/activityugcreview/client_api/updateUGCToModerateOrFeature?feedbackReason=" + feedbackReason
+						+ "&moderationReason=" + moderationReason);
+
 	}
 
 }

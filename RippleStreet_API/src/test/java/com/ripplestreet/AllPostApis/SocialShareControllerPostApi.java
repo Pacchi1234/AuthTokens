@@ -15,10 +15,10 @@ import com.ripplestreet.genricUtilities.postApiutilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class ClickTheLinkControllerPostApi extends postApiutilities {
+public class SocialShareControllerPostApi extends postApiutilities {
 	@Test(groups="activityugcreview")
-	public void clickLinks() throws IOException {
-		Testcase = 52;
+	public void Create() throws IOException {
+		Testcase = 58;
 		File file = new File(postApipath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
@@ -30,7 +30,7 @@ public class ClickTheLinkControllerPostApi extends postApiutilities {
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/activityugcreview/client_api/clickLink");
+				.post("/activityugcreview/socialshare/create");
 		
 	}
 

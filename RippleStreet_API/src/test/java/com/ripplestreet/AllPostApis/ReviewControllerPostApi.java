@@ -68,7 +68,7 @@ public class ReviewControllerPostApi extends postApiutilities {
 				.post("/activityugcreview/review/createExternalReview");
 
 	}
-	@Test
+	@Test(groups = "activityugcreview")
 	public void getExternalReviewList() throws IOException {
 		Testcase = 56;
 		File file = new File(postApipath);
@@ -85,7 +85,7 @@ public class ReviewControllerPostApi extends postApiutilities {
 				.post("/activityugcreview/review/external/filter");
 		
 	}
-	@Test
+	@Test(groups = "activityugcreview")
 	public void getReviewListByFiltersForExport() throws IOException {
 		Testcase = 57;
 		File file = new File(postApipath);

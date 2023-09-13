@@ -51,7 +51,6 @@ public class UgcControllerGetApi extends genricUtilities {
 	public void getUserAsset() {
 		flag = false;
 		response = RestAssured.given().when().get("/activityugcreview/client_api/getUserAsset?eventId=" + eventId);
-
 		Testcase = 54;
 	}
 

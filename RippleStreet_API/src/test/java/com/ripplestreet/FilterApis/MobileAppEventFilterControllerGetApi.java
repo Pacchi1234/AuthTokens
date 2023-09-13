@@ -7,7 +7,7 @@ import io.restassured.RestAssured;
 
 public class MobileAppEventFilterControllerGetApi extends genricUtilities {
 
-	@Test
+	@Test(groups="event")
 	public void discoverMobileEvent() throws NumberFormatException, IOException {
 		Testcase = 406;
 		for (String Mobilevent : mobileEventType) {

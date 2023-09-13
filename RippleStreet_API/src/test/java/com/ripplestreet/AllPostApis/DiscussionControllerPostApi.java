@@ -16,7 +16,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
 public class DiscussionControllerPostApi extends postApiutilities {
-	@Test
+	@Test(groups="activityugcreview")
 	public void CreateDiscussion() throws IOException {
 		Testcase = 53;
 		File file = new File(postApipath);
@@ -33,7 +33,7 @@ public class DiscussionControllerPostApi extends postApiutilities {
 				.post("/activityugcreview/v1/discussions");
 
 	}
-	@Test
+	@Test(groups="activityugcreview")
 	public void getDiscussionList() throws IOException {
 		Testcase = 54;
 		File file = new File(postApipath);
@@ -49,7 +49,7 @@ public class DiscussionControllerPostApi extends postApiutilities {
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.post("/activityugcreview/v1/discussions/filter");
 	}
-	@Test
+	@Test(groups="activityugcreview")
 	public void DisscussionAdminCreate() throws IOException {
 		Testcase = 55;
 		File file = new File(postApipath);

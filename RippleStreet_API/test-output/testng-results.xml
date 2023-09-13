@@ -1,45 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-11T17:41:11 IST" name="Default suite" finished-at="2023-09-11T17:41:16 IST" duration-ms="4731">
+  <suite started-at="2023-09-13T12:16:38 IST" name="Default suite" finished-at="2023-09-13T12:16:41 IST" duration-ms="2167">
     <groups>
       <group name="activityugcreview">
-        <method signature="DiscussionControllerGetApi.getDiscussionListByFilters()[pri:55, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" name="getDiscussionListByFilters" class="com.ripplestreet.AllGetApis.DiscussionControllerGetApi"/>
-        <method signature="DiscussionControllerGetApi.getDiscussion()[pri:56, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" name="getDiscussion" class="com.ripplestreet.AllGetApis.DiscussionControllerGetApi"/>
+        <method signature="UgcControllerGetApi.getUserAsset()[pri:54, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" name="getUserAsset" class="com.ripplestreet.AllGetApis.UgcControllerGetApi"/>
       </group> <!-- activityugcreview -->
     </groups>
-    <test started-at="2023-09-11T17:41:11 IST" name="Default test" finished-at="2023-09-11T17:41:16 IST" duration-ms="4731">
-      <class name="com.ripplestreet.AllGetApis.DiscussionControllerGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:07 IST" name="authToken" finished-at="2023-09-11T17:41:11 IST" duration-ms="3621" status="PASS">
+    <test started-at="2023-09-13T12:16:38 IST" name="Default test" finished-at="2023-09-13T12:16:41 IST" duration-ms="2167">
+      <class name="com.ripplestreet.AllGetApis.UgcControllerGetApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:36 IST" name="authToken" finished-at="2023-09-13T12:16:38 IST" duration-ms="2663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:11 IST" name="BaseURI" finished-at="2023-09-11T17:41:11 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:38 IST" name="BaseURI" finished-at="2023-09-13T12:16:38 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="getDiscussionListByFilters()[pri:55, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:11 IST" name="getDiscussionListByFilters" finished-at="2023-09-11T17:41:12 IST" duration-ms="1530" status="PASS">
+        <test-method signature="getUserAsset()[pri:54, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:38 IST" name="getUserAsset" finished-at="2023-09-13T12:16:40 IST" duration-ms="1184" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getDiscussionListByFilters -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:12 IST" name="StatusCode" finished-at="2023-09-11T17:41:14 IST" duration-ms="1341" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StatusCode -->
-        <test-method signature="getDiscussion()[pri:56, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:14 IST" name="getDiscussion" finished-at="2023-09-11T17:41:15 IST" duration-ms="1506" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getDiscussion -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:14 IST" name="BaseURI" finished-at="2023-09-11T17:41:14 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BaseURI -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.DiscussionControllerGetApi@8462f31]" started-at="2023-09-11T17:41:15 IST" name="StatusCode" finished-at="2023-09-11T17:41:16 IST" duration-ms="295" status="PASS">
+        </test-method> <!-- getUserAsset -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:40 IST" name="StatusCode" finished-at="2023-09-13T12:16:41 IST" duration-ms="944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllGetApis.DiscussionControllerGetApi -->
+      </class> <!-- com.ripplestreet.AllGetApis.UgcControllerGetApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

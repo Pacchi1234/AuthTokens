@@ -11,4 +11,15 @@ public class MobileAppEventControllerGetApi extends genricUtilities {
 		System.out.println(eventType);
 		Testcase=405;
 	}
+	@Test(groups="event")
+	public void getMobileEventHeroPlaylists() {
+		response=RestAssured.get("/event/v1/app/heroplaylist?eventIds="+eventId);
+		Testcase=434;
+	}
+	@Test(groups="event")
+	public void getMobileEventDetailBySlugAndPersonId() {
+		response=RestAssured.get("/event/v1/discover/event/"+slug);
+		Testcase=435;
+		
+	}
 }

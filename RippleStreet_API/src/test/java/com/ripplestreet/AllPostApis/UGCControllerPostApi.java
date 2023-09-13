@@ -80,5 +80,21 @@ public class UGCControllerPostApi extends postApiutilities {
 				.post("/activityugcreview/client_api/ugc");
 
 	}
+	@Test(groups = "activityugcreview")
+	public void getSocialAssetForExport() throws IOException {
+		Testcase = 59;
+		File file = new File(postApipath);
+		FileInputStream fis = new FileInputStream(file);
+		@SuppressWarnings("resource")
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("postApi");
+		XSSFRow row2 = sheet.getRow(Testcase);
+		XSSFCell cell2 = row2.getCell(4);
+		PutBody = cell2.getStringCellValue();
+		System.out.println(PutBody);
+		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
+				.post("/activityugcreview/client_api/export/GetUGCListByFilters");
+		
+	}
 
 }

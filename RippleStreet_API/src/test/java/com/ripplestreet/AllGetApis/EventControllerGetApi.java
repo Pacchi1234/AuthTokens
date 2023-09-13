@@ -130,14 +130,14 @@ public class EventControllerGetApi extends genricUtilities  {
 
 	}
 
-	@Test
+	@Test(groups = "event")
 	public void getEventDetailforWorkflow() {
 		response = RestAssured.given().get("/event/events/getEventDetail/" + eventId + "/" + pid);
 		Testcase = 397;
 
 	}
 
-	@Test
+	@Test(groups = "event")
 	public void getStatus() {
 		response = RestAssured.get("/event/v1/getStatus?eventId=" + eventId + "&pid=" + pid);
 		Testcase = 415;

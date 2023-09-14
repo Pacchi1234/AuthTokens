@@ -2,31 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-13T12:16:38 IST" name="Default suite" finished-at="2023-09-13T12:16:41 IST" duration-ms="2167">
+  <suite started-at="2023-09-14T11:31:10 IST" name="Default suite" finished-at="2023-09-14T11:31:13 IST" duration-ms="2724">
     <groups>
-      <group name="activityugcreview">
-        <method signature="UgcControllerGetApi.getUserAsset()[pri:54, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" name="getUserAsset" class="com.ripplestreet.AllGetApis.UgcControllerGetApi"/>
-      </group> <!-- activityugcreview -->
     </groups>
-    <test started-at="2023-09-13T12:16:38 IST" name="Default test" finished-at="2023-09-13T12:16:41 IST" duration-ms="2167">
-      <class name="com.ripplestreet.AllGetApis.UgcControllerGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:36 IST" name="authToken" finished-at="2023-09-13T12:16:38 IST" duration-ms="2663" status="PASS">
+    <test started-at="2023-09-14T11:31:10 IST" name="Default test" finished-at="2023-09-14T11:31:13 IST" duration-ms="2724">
+      <class name="com.ripplestreet.AllPostApis.ActivityControllerPostApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllPostApis.ActivityControllerPostApi@303cf2ba]" started-at="2023-09-14T11:31:07 IST" name="authToken" finished-at="2023-09-14T11:31:10 IST" duration-ms="3394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:38 IST" name="BaseURI" finished-at="2023-09-13T12:16:38 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllPostApis.ActivityControllerPostApi@303cf2ba]" started-at="2023-09-14T11:31:10 IST" name="BaseURI" finished-at="2023-09-14T11:31:10 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="getUserAsset()[pri:54, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:38 IST" name="getUserAsset" finished-at="2023-09-13T12:16:40 IST" duration-ms="1184" status="PASS">
+        <test-method signature="RecordActivityResponse()[pri:0, instance:com.ripplestreet.AllPostApis.ActivityControllerPostApi@303cf2ba]" started-at="2023-09-14T11:31:10 IST" name="RecordActivityResponse" finished-at="2023-09-14T11:31:12 IST" duration-ms="2315" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getUserAsset -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.UgcControllerGetApi@7c37508a]" started-at="2023-09-13T12:16:40 IST" name="StatusCode" finished-at="2023-09-13T12:16:41 IST" duration-ms="944" status="PASS">
+        </test-method> <!-- RecordActivityResponse -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllPostApis.ActivityControllerPostApi@303cf2ba]" started-at="2023-09-14T11:31:12 IST" name="StatusCode" finished-at="2023-09-14T11:31:13 IST" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllGetApis.UgcControllerGetApi -->
+      </class> <!-- com.ripplestreet.AllPostApis.ActivityControllerPostApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

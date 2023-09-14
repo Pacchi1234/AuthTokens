@@ -15,10 +15,10 @@ import com.ripplestreet.genricUtilities.postApiutilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class BenefitsControllerPostApi extends postApiutilities {
-	@Test(groups = "benfits-platform")
-	public void CreateBenefit() throws IOException {
-		Testcase = 33;
+public class ActivityControllerPostApi  extends postApiutilities{
+	@Test
+	public void RecordActivityResponse() throws IOException {
+		Testcase = 60;
 		File file = new File(postApipath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
@@ -28,9 +28,10 @@ public class BenefitsControllerPostApi extends postApiutilities {
 		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
+		response = RestAssured.given().header("Authorization",AccessToken).contentType(ContentType.JSON).body(PutBody).when()
+				.post("/activity-hub/v1/activity/recordActivityResponse?async=true");
 
-		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/benefits-platform/v1/benefit/save?name=Socialite");
+		
 	}
 
 }

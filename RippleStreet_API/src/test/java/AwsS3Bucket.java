@@ -15,7 +15,8 @@ public class AwsS3Bucket {
 		// Replace these with your AWS S3 credentials and bucket information
 		String accessKey = "AKIASSI22RH3T2Z3X2OV";
 		String secretKey = "bkkXHa4zhjJzPJd5ABMxQI11hBVgi05L+nVojAE8";
-		String bucketName = "rs-api-tests";
+		String bucketName = "rs-api-tests2	";
+		@SuppressWarnings("unused")
 		String folderName = "Api Automation"; // Specify the folder name
 		String localDirectoryPath = "C:\\Users\\Prashanthchigarer\\Desktop\\git\\ripplestreet-automation-testing\\RippleStreet_API\\src\\test\\resources\\config\\postApi.xlsx";
 		// Create AWS S3 client
@@ -48,15 +49,15 @@ public class AwsS3Bucket {
                         upload.waitForCompletion();
                         System.out.println("File uploaded to S3: " + objectKey);
                     }
-                }
+                } 
             }
 
             System.out.println("Files uploaded to S3 successfully!");
 
         
-        } finally {
-            // Shutdown the TransferManager when done
-            transferManager.shutdownNow();
+        } finally { 
+            // Shutdown the TransferManager when doneL                                                                                                                                                                                                                                                                                                                                                                                                                         
+           transferManager.shutdownNow();
         }
 	}
 }

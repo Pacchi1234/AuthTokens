@@ -1,7 +1,5 @@
 package com.ripplestreet.genricUtilities;
 
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -11,19 +9,15 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-import javax.imageio.ImageIO;
-import org.apache.poi.ss.usermodel.CellType;
+
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import com.ripplestreet.AllGetApis.UgcControllerGetApi;
+
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class genricUtilities {
@@ -183,23 +177,9 @@ public class genricUtilities {
 	public List<String> mobileEventType = Arrays.asList("APPLY", "APPLIED", "SELECTED", "PAST");
 	public List<String> entityName = Arrays.asList("CAMPAIGN", "SPONSOR", "DISCUSSION", "EXTERNAL_REVIEW",
 			"REWARD_PREFERENCE", "SEGMENT", "RECEIPT", "AUDIENCE", "PARTY");
-	public String AccessToken = null;
+	public static String AccessToken = null;
 	public static File file = new File(devApiPath);
 
-	@BeforeSuite
-	public void authToken() {
-		try {
-			response = RestAssured.given().contentType(ContentType.JSON).body(body)
-					.post("https://dev.ripplestreet.com/auth/login");
-			String responseBody = response.asString();
-			JsonPath jsonPath = new JsonPath(responseBody);
-			System.out.println(responseBody);
-			AccessToken = jsonPath.getString("accessToken");
-			System.out.println("AccsessToken is =" + AccessToken);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	@BeforeMethod
 	public void BaseURI() throws InterruptedException {
@@ -209,83 +189,20 @@ public class genricUtilities {
 	@SuppressWarnings("unlikely-arg-type")
 	@AfterMethod
 	public static void StatusCode() throws IOException, NumberFormatException {
-		File file = new File(devApiPath);
-		int statuscode = response.statusCode();
-		if (statuscode == 200 || statuscode == 201 || statuscode == 302 || statuscode == 202) {
-			System.out.println("status code is" + statuscode);
-		} else if (statuscode == 400) {
-			System.err.println("status code is 400");
-		} else {
-			System.err.println("status code is 500");
+		FileInputStream fis = new FileInputStream(file);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
+		FileOutputStream fio = new FileOutputStream(file);
+		XSSFRow row1 = sheet.getRow(Testcase);
+		XSSFCell cell1 = row1.getCell(2);
+		cell1.setCellValue(AccessToken);
+		int statusCode = response.statusCode();
+		XSSFCell cell = row1.getCell(3);
+		cell.setCellValue(statusCode);
+		workbook.write(fio);
+		fis.close();
+		
 		}
-		String ActualOutput = response.asString();
-		int contentLength = ActualOutput.length();
-		if (contentLength > 32767) {
-			System.out.println("Cannot invoke more than 32767 Charecters in the Cell");
-		} else {
-			FileInputStream fis = new FileInputStream(file);
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
-			XSSFRow row = sheet.getRow(Testcase);
-			XSSFCell cell = row.getCell(2);
-			System.out.println("Actual output is" + ActualOutput);
-			System.out.println("Expected Output is " + cell);
-			FileOutputStream fio = new FileOutputStream(file);
-			XSSFRow row1 = sheet.getRow(Testcase);
-			XSSFCell cell1 = row1.getCell(3);
-			cell1.setCellValue(ActualOutput);
-			XSSFCell cell2 = row1.getCell(5);
-			cell2.setCellValue(statuscode);
-
-			if (cell != null) {
-				switch (cell.getCellType()) {
-				case STRING:
-					String StringCellValue = cell.getStringCellValue();
-					if (StringCellValue.equals(ActualOutput)) {
-						System.err.println("Testcase " + Testcase + " " + "has been Passed");
-						XSSFCell passOrFail = row.getCell(6);
-						passOrFail.setCellValue("Pass");
-					} else {
-						System.err.println("Tseatcase " + Testcase + "is Mismatching");
-						XSSFCell passOrFail = row.getCell(6);
-						passOrFail.setCellValue("Fail");
-					}
-					break;
-				case NUMERIC:
-					Double NumericCellValue = cell.getNumericCellValue();
-					if (NumericCellValue.equals(ActualOutput)) {
-						System.out.println("Testcase is Passed");
-						XSSFCell passOrFail = row.getCell(6);
-						passOrFail.setCellValue("Pass");
-					} else {
-						System.out.println("Test Output is Mismatching");
-						XSSFCell passOrFail = row.getCell(6);
-						passOrFail.setCellValue("Fail");
-					}
-					break;
-				case BOOLEAN:
-					Boolean BooleanCellValue = cell.getBooleanCellValue();
-					if (BooleanCellValue.equals(ActualOutput)) {
-						System.out.println("Testcase is Passed");
-						XSSFCell passOrFail = row.getCell(6);
-						passOrFail.setCellValue("Pass");
-					} else {
-						System.out.println("Test Output is Mismatching");
-						XSSFCell passOrFail = row.getCell(6);
-						passOrFail.setCellValue("Fail");
-					}
-					break;
-				default:
-					break;
-				}
-			}
-			if (cell != null) {
-				workbook.write(fio);
-			}
-			workbook.close();
-			fio.close();
-
-		}
-
 	}
-}
+
+

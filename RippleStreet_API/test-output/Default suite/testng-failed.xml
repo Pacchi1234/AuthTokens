@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ripplestreet.AllGetApis.MobileAppEventControllerGetApi">
+      <class name="com.ripplestreet.AllPostApis.AuthTokens">
         <methods>
-          <include name="authToken"/>
-          <include name="getMobileEventHeroPlaylists"/>
-          <include name="getMobileEventDetailBySlugAndPersonId"/>
           <include name="BaseURI"/>
+          <include name="authToken1"/>
           <include name="StatusCode"/>
         </methods>
-      </class> <!-- com.ripplestreet.AllGetApis.MobileAppEventControllerGetApi -->
+      </class> <!-- com.ripplestreet.AllPostApis.AuthTokens -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

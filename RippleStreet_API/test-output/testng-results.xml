@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-15T17:54:03 IST" name="Default suite" finished-at="2023-09-15T17:54:06 IST" duration-ms="3333">
+  <suite started-at="2023-09-18T14:04:25 IST" name="Default suite" finished-at="2023-09-18T14:04:25 IST" duration-ms="69">
     <groups>
-      <group name="event">
-        <method signature="EventControllerGetApi.getFilteredEvents()[pri:189, instance:com.ripplestreet.AllGetApis.EventControllerGetApi@61c4eee0]" name="getFilteredEvents" class="com.ripplestreet.AllGetApis.EventControllerGetApi"/>
-      </group> <!-- event -->
     </groups>
-    <test started-at="2023-09-15T17:54:03 IST" name="Default test" finished-at="2023-09-15T17:54:06 IST" duration-ms="3333">
-      <class name="com.ripplestreet.AllGetApis.EventControllerGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.EventControllerGetApi@61c4eee0]" started-at="2023-09-15T17:54:00 IST" name="authToken" finished-at="2023-09-15T17:54:03 IST" duration-ms="3348" status="PASS">
+    <test started-at="2023-09-18T14:04:25 IST" name="Default test" finished-at="2023-09-18T14:04:25 IST" duration-ms="69">
+      <class name="com.ripplestreet.AllPostApis.AuthTokens">
+        <test-method signature="authToken1(int)[pri:0, instance:com.ripplestreet.AllPostApis.AuthTokens@35dab4eb]" started-at="2023-09-18T14:04:25 IST" name="authToken1" finished-at="2023-09-18T14:04:25 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [authToken1] with [int].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [authToken1] with [int].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
+at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:911)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.EventControllerGetApi@61c4eee0]" started-at="2023-09-15T17:54:03 IST" name="BaseURI" finished-at="2023-09-15T17:54:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BaseURI -->
-        <test-method signature="getFilteredEvents()[pri:189, instance:com.ripplestreet.AllGetApis.EventControllerGetApi@61c4eee0]" started-at="2023-09-15T17:54:03 IST" name="getFilteredEvents" finished-at="2023-09-15T17:54:05 IST" duration-ms="1644" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getFilteredEvents -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.EventControllerGetApi@61c4eee0]" started-at="2023-09-15T17:54:05 IST" name="StatusCode" finished-at="2023-09-15T17:54:06 IST" duration-ms="1630" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllGetApis.EventControllerGetApi -->
+        </test-method> <!-- authToken1 -->
+      </class> <!-- com.ripplestreet.AllPostApis.AuthTokens -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
